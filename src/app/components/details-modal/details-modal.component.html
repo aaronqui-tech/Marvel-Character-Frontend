@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Detalles</h2>
+<mat-dialog-content>
+    <p *ngIf="character.name > 0">Name: {{ character.name }}</p>
+    <p>ID characters: {{ character.id }}</p>
+    <p>Aparece en {{ character.comics.available }} cómics:</p>
+    <ul><li *ngFor="let item of character.comics.items">{{item.name }}</li></ul>
+    <p>Aparece en {{ character.series.available }} seríes:</p>
+    <ul><li *ngFor="let item of character.series.items">{{item.name }}</li></ul>
+    <p>Aparece en {{ character.stories.available }} Historíetas:</p>
+    <ul><li *ngFor="let item of character.stories.items">{{item.name }}</li></ul>
+    <p>Aparece en {{ character.events.available }} Eventos:</p>
+    <ul><li *ngFor="let item of character.events.items">{{item.name }}</li></ul>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="btn btn-primary" mat-button mat-dialog-close cdkFocusInitial>Cerrar</button>
+</mat-dialog-actions>

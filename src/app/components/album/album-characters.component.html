@@ -1,0 +1,5 @@
+<div class="album-container">
+    <div class="background-mosaic">
+        <img *ngFor="let character of characters" [src]="character.thumbnail.path + '.' + character.thumbnail.extension" (click)="openDetailsModal(character)">
+    </div>
+</div>

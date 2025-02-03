@@ -1,0 +1,23 @@
+.nav-container {
+    width: 100vw;
+    height: 5vh;
+    text-align: center;
+
+    a {
+        transition: 0.4s;
+        font-size: 20px;
+        color: #000;
+        text-decoration: none;
+        margin: 0 1rem;
+    }
+
+    a:hover {
+        transition: 0.4s;
+        color: #adadad;
+    }
+}
+
+.main-container {
+    width: 100vw;
+    height: 95vh;
+}

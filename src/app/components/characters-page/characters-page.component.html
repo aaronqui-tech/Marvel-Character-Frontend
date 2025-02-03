@@ -1,0 +1,4 @@
+<div class="main-container">
+    <search-character-component class="container-component" (characterAction)="findCharacter($event)"></search-character-component>
+    <album-characters-component class="container-component" *ngIf="response != null" [characters]="response.data.results"></album-characters-component>
+</div>
