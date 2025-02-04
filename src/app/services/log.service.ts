@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
-import { DefaultResponse } from '../interfaces/DefaultRespone';
+import { DefaultResLog } from '../interfaces/DefaultResLog';
 import { Log } from '../interfaces/Log';
 
 @Injectable({
@@ -12,11 +12,11 @@ export class LogService {
   private path: string;
 
   constructor(private http: HttpClient) {
-    this.path = `${environment.apiUrl}/logs`;
+    this.path = `${environment.apiUrl}/character/log`;
   }
 
-  getAll(id: string) {
-    return this.http.get<DefaultResponse<Log>>(this.path);
+  getAll() {
+    return this.http.get<DefaultResLog<Log[]>>(this.path);
   }
 
 }

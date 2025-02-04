@@ -10,7 +10,6 @@ import { Character } from '../interfaces/Character';
 export class CharactersService {
 
   private path: string;
-  //private characters: Character[];
 
   constructor(private http: HttpClient) {
     this.path = `${environment.apiUrl}/character`;

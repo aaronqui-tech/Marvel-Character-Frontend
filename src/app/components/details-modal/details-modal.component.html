@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Detalles</h2>
 <mat-dialog-content>
-    <p *ngIf="character.name > 0">Name: {{ character.name }}</p>
+    <p>Name: {{ character.name }}</p>
     <p>ID characters: {{ character.id }}</p>
     <p>Aparece en {{ character.comics.available }} cómics:</p>
     <ul><li *ngFor="let item of character.comics.items">{{item.name }}</li></ul>

@@ -1,4 +1,5 @@
 export interface Log {
     id: number;
-    name: string;
+    apiEndpoint: string;
+    datetime: string;
 }

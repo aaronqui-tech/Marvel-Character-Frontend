@@ -3,22 +3,22 @@
 
     <table class="table">
         <thead>
-            <tr>
+            <tr class="tr-title">
                 <th scope="col">Identificador</th>
                 <th scope="col">Nombre</th>
+                <th scope="col">Fecha Consulta</th>
             </tr>
         </thead>
         <tbody>
-            @for (log of logs; track log) {
-            <tr>
-                <th scope="row">{{ log.id }}</th>
-                <td>{{ log.name }}</td>
+            <tr *ngFor="let log of logs.data.logs">
+                <td scope="row">{{ log.id }}</td>
+                <td>{{ log.apiEndpoint }}</td>
+                <td>{{ log.datetime }}</td>
             </tr>
-            } @empty {
-            <tr class="empty-row">
+
+            <tr *ngIf="logs == null" class="empty-row">
                 No se encontraron personajes
             </tr>
-            }
         </tbody>
     </table>
 </div>
