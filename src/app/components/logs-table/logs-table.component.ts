@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { DefaultResLog } from '../../interfaces/DefaultResLog';
 import { Log } from '../../interfaces/Log'
 import { LogService } from '../../services/log.service';
@@ -14,7 +14,6 @@ import { CommonModule } from '@angular/common';
 })
 export class LogsTableComponent {
 
-  //@Input() logs: Log[];
   logs!: DefaultResLog<Log[]>;
 
   constructor(private logService: LogService) {
@@ -22,8 +21,7 @@ export class LogsTableComponent {
   }
 
   public loadLogs(): void {
-    this.logService.getAll().subscribe(
-      response=>{
+    this.logService.getAll().subscribe(response=>{
         this.logs = response;
       });
   }
